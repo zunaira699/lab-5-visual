@@ -1,0 +1,54 @@
+public class Customer
+{
+    public int CustomerId { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+    public string Street   
+ { get; set; }
+    public string City { get; set; }
+    public string State { get; set; }
+    public string ZipCode { get; set; }
+    public string Phone { get; set; }
+    public string Email { get; set;   
+ }
+    public string Password { get; set; }
+}
+
+public   
+ class RetailCustomer : Customer
+{
+    public string CreditCardType { get; set; }
+    public string CreditCardNo { get; set; }
+}
+
+public class CorporateCustomer : Customer
+{
+    public string CompanyName { get; set; }
+    public int FrequentFlyerPts { get; set; }
+    public string BillingAccountNo { get; set; }
+}
+
+public class Reservation
+{
+    public int ReservationNo { get; set; }
+    public DateTime Date { get; set; }
+    public int SeatRowNo { get; set; }
+    public int SeatNo { get; set; }
+    public decimal Price { get; set; }
+    public int Status { get; set; }
+    public int CustomerId { get; set; }
+    public int FlightId { get; set; }
+}
+
+public class Flight
+{
+    public int FlightId { get; set; }
+    public DateTime Date { get; set; }
+    public string Origin { get; set; }
+    public string Destination { get; set; }
+    public   
+ TimeSpan DepartureTime { get; set; }
+    public TimeSpan ArrivalTime { get; set; }
+    public int   
+ SeatingCapacity { get; set; }
+}
